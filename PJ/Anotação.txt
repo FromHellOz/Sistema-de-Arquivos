@@ -1,4 +1,0 @@
-Sistema de arquivamento
-Fazer gerar uma matrícula por cada novo usuário
-salvar os dados do cadastro
-pegar os dados na pagina de login e encaminhar pra pagina inicial se os dados forem válidos
