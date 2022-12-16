@@ -5,12 +5,12 @@
     font-family: "Roboto", sans-serif;
 }
 :root{
-    --rosa:rgb(239, 221, 230);
-    --cinza:rgb(114, 76, 97);
-    --roxo:rgb(64,44,55);
+    --ciano:#259CD3;
+    --azul:#004972;
+    --prata:#ECEDED;
 }
 body{
-    background-color: #262626;
+    background-color: #fff;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -19,10 +19,16 @@ body{
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 0px;
+    background:linear-gradient(135deg, #004972 50%, #259CD3 50%);
+      height: 30px;
+}
+.site-title img{
+    padding-left: 200px;
+    width: 100px;
 }
 .card{
-    background-color: #ffffff80;
+    background-color: var(--ciano);
     border-radius: 70px;
     width: 400px;
     height: 400px;
@@ -39,14 +45,14 @@ body{
 h1{
     text-align: center;
     margin-bottom: 20px;
-    color: var(--rosa);
+    color: var(--prata);
 }
 .label-float input{
     width: 100%;
     padding:5px;
     display: inline-block;
     border:0;
-    border-bottom:2px solid var(--roxo);
+    border-bottom:2px solid var(--azul);
     background-color: transparent;
     border-radius: 10%;
     outline:none;
@@ -61,10 +67,10 @@ h1{
     margin-bottom: 5%;
 }
 .label-float input:focus{
-    border-bottom: var(--rosa) 2px solid;
+    border-bottom: var(--prata) 2px solid;
 }
 .label-float label{
-    color: var(--roxo);
+    color: var(--prata);
     pointer-events: none;
     position: absolute;
     top: 0;
@@ -76,23 +82,23 @@ h1{
 .label-float input:valid + label{
     font-size: 13px;
     margin-top: 0;
-    color: var(--rosa);
+    color: var(--azul);
 }
 .botao{
-    background-color: transparent;
-    color: var(--rosa);
+    background-color: var(--azul);
+    color: var(--prata);
     padding:12px;
     font-weight: bold;
     font-size: 12pt;
     margin-top:20px;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     outline: none;
     box-shadow:2px 2px 2px 1px #00000020;
 }
 .botao:hover{
-    background-color: #1c181a;
-    color: var(--rosa);
+    background-color: var(--prata);
+    color: var(--azul);
     transition: all .4s ease-out;
 }
 .center{
@@ -106,16 +112,16 @@ hr{
 }
 p{
     text-align: center;
-    color: var(--roxo);
+    color: var(--prata);
     font-size:14pt
 }
 a{
-    color: var(--rosa);
+    color:var(--prata);
     font-weight: bold;
     text-decoration: none;
 }a:hover{
-    color: var(--roxo);
-    transition: all .1s ease-out;
+    color: var(--azul);
+    transition: all .4s ease-out;
 }
 
 #Open {/*visualização da senha*/
@@ -171,7 +177,7 @@ margin-left: 153px ;
     text-decoration: underline;
 }
 .pace .pace-progress{
-    background-color: var(--rosa);
+    background-color: var(--azul);
     position: fixed;
     z-index: 2000;
     top: 0;

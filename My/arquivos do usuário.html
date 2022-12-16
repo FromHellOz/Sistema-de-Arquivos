@@ -5,6 +5,7 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
     <link  rel="stylesheet"  href="estiloarquivo.css"  type="text/css">
     <title>Pesquisa</title>
   
@@ -13,13 +14,25 @@
   <body class="mybackground">
     <!--início cabeçalho -->
 
-    <header>
-        
+    <header class="site-header">
+      <div class="ally-container no-print">
+        <div class="wrapper">
+          <div class="controls">
+
+          </div>
+        </div>
+      </div>
+        <div>
+          <a class="site-title">
+            <img src="imagens/logo-OK.png">
+          </a>
         <nav class="barra">
             <a class="nav-link" href="index.html">Home</a>
             <a class="nav-link" href="login.html">Entrar</a>
         </nav>
    </header>
+   <div>
+
 <!-- Fim do cabeçalho -->
 
 <!--inicio do corpo-->
@@ -29,39 +42,42 @@
     <th class="coluna1">Dados</th>
  </tr>
   <tr>
-    <td>Nome:</td>
+    <td id="nome">Nome:</td>
  </tr>
   <tr>
-    <td>Cpf:</td>
+    <td id="cpf">Cpf:</td>
  </tr>
   <tr>
-    <td>Matrícula:</td>
+    <td id="matricula">Matrícula:</td>
 </tr>
 <tr>
-    <td>Tel:</td>
+    <td id="tel">Tel:</td>
 </tr>
   <tr>
-    <td>Endereço:</td>
+    <td id="endereço">Endereço:</td>
  </tr>
   <tr>
-    <td>Situação:</td>
+    <td id="situacao">Situação:</td>
 </tr>
 </table>
+<script>
+
+</script>
 <section>
   
     <div class="caixa">
      
-
-      <a class="link" href="index.html"></a>
-      <a href="login.html"> <img src="imagens\pasta.png" width="60X60px"></a>
-       <a class="link" href="login.html"><h6>Documento A</h6></a>
-      <a href="login.html"><img src="imagens\pasta.png" width="60X60px"></a>
-       <a class="link" href="login.html"><h6>Documento B</h6></a>
-       <a href="login.html"><img src="imagens\pasta.png" width="60X60px"></a>
-       <a class="link" href="login.html"><h6>Documento C</h6></a>
-       <a href="login.html"><img src="imagens\pasta.png" width="60X60px"></a>
-       <a class="link" href="login.html"><h6>Documento D</h6></a>
-   
+      <div class="link">
+       <a href=""></a>
+       <a href=""> <img src="imagens\pasta.png" width="60X60px"></a>
+       <a href=""><h6>Documento A</h6></a>
+       <a href=""><img src="imagens\pasta.png" width="60X60px"></a>
+       <a href=""><h6>Documento B</h6></a>
+       <a href=""><img src="imagens\pasta.png" width="60X60px"></a>
+       <a href="""><h6>Documento C</h6></a>
+       <a href=""><img src="imagens\pasta.png" width="60X60px"></a>
+       <a href=""><h6>Documento D</h6></a>
+      </div>
 
     
     
