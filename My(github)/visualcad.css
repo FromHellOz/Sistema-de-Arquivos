@@ -24,6 +24,7 @@ body{
       height: 30px;;
 }
 .site-title img{
+    padding-top: 1%;
     padding-left: 200px;
     width: 100px;
 }
@@ -36,7 +37,6 @@ body{
     flex-direction: row;
     justify-content:center;
     align-items: center;
-    box-shadow: 3px 3px 2px 0px #00000030;
     margin-top:5%;
     margin-bottom:1%;
     padding-left: 30px;
@@ -58,7 +58,7 @@ h1{
     outline: none;
     min-width: 180px;
     font-size:16px;
-    transition:all .3 ease-out;
+    transition:all .9s ease-out;
 }
 .label-float{
     position: relative;
@@ -68,6 +68,7 @@ h1{
 }
 .label-float input:focus{
     border-bottom: 2px solid var(--prata);
+    transition: all .9s ease-out;
 }
 .label-float label{
     color: var(--prata);
@@ -76,13 +77,14 @@ h1{
     top:0;
     left: 0;
     margin-top: 13px;
-    transition:all .3s ease-out
+    transition:all .9s ease-out
 }
 .label-float input:focus + label,
 .label-float input:valid + label{
     font-size: 13px;
     margin-top: 0;
     color: var(--azul);
+    transition: all .5s ease-out;
 }
 .botao{
     background-color: var(--azul);
@@ -96,8 +98,8 @@ h1{
     outline:none;
 }
 .botao:hover{
-    background-color: var(--azul);
-    color: var(--prata);
+    background-color: var(--prata);
+    color: var(--azul);
     transition:all .4s ease-out;
 }
 .center{
@@ -164,13 +166,13 @@ form{
     text-decoration: underline;
 }
 a{
-    color: var(--rosa);
+    color: var(--prata);
     font-weight: bold;
     text-decoration: none;
 }
 a:hover{
-    color: var(--roxo);
-    transition: all .1s ease-out;
+    color: var(--azul);
+    transition: all .4s ease-out;
 }
 hr{
     margin-top: 8%;
@@ -179,8 +181,4 @@ hr{
 }
 .redirecionar{
     margin-left: 110px;
-}
-input:valid{
-    border: 2px solid #2bff6440;
-    box-shadow: 2px 2px 2px 1px #00000020;
 }
