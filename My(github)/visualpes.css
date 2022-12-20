@@ -46,7 +46,6 @@ body{
   
   }*/
   .site-title img{
-    padding-top: 1%;
     padding-left: 200px;
     width: 200px;
   }
@@ -159,9 +158,4 @@ td, th{
 ::placeholder{
     color: var(--prata);
 }
-.site-footer img{
-    padding-top: 700px;
-    width: 50%;
-    padding-left: 25%;
-    padding-bottom: 3%;
-}
+
