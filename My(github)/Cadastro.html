@@ -11,12 +11,15 @@
     <title>Página de Cadastro</title>
 </head>
 <body>
+ 
     <a class="site-title">
         <img src="imagens/brasao.png">
       </a>
     <div class="container">
         <div class="card">
+            <form action="Testecad.php" method="post">
             <h1>Cadastre-se</h1>
+            
             <div class="label-float">
 
                 <input type="text" placeholder="" id="user" required>
@@ -55,7 +58,7 @@
                 <span class="cad">
                     Já tem uma Conta?
                 </span>
-                <a  class="link" href="Login.html">
+                <a  class="link" href="index.html">
                     Entre aqui!
                 </a>
                 </li>
@@ -70,5 +73,6 @@
                 input.type = input.type == 'text' ? 'password' : 'text';
                 });
             </script>
+    </form>
 </body>
 </html>

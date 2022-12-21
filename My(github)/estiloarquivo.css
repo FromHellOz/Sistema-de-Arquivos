@@ -154,7 +154,7 @@ color: white;
   
 
 }
-.caixa2{/*caixa cinza que seria feita pra sla oq*/
+.caixa2{/*caixa pra visualização de documentos*/
   background-color: var(--ciano);
   height: auto;
   width: 50%;

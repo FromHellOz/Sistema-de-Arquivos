@@ -29,14 +29,13 @@ body{
 }
 .card{
     background-color: var(--ciano);
-    border-radius: 70px;
+    border-radius: 120px;
     width: 500px;
     height: 500px;
     padding: 100px;
     flex-direction: row;
     justify-content:center;
     align-items: center;
-    box-shadow: 3px 3px 2px 0px #00000030;
     margin-top:5%;
     margin-bottom:1%;
     padding-left: 30px;
@@ -111,7 +110,7 @@ h1{
     display:flex;
     margin-top:10px;
     margin-bottom:40px;
-    margin-left:470px;
+    margin-left:220px;
     margin-right:5px;
 
 }
@@ -164,13 +163,13 @@ form{
     text-decoration: underline;
 }
 a{
-    color: var(--rosa);
+    color: var(--prata);
     font-weight: bold;
     text-decoration: none;
 }
 a:hover{
-    color: var(--roxo);
-    transition: all .1s ease-out;
+    color: var(--azul);
+    transition: all .4s ease-out;
 }
 hr{
     margin-top: 8%;
@@ -178,9 +177,6 @@ hr{
     width: 100%;
 }
 .redirecionar{
-    margin-left: 110px;
-}
-input:valid{
-    border: 2px solid #2bff6440;
-    box-shadow: 2px 2px 2px 1px #00000020;
+    margin-top: 50px;
+    margin-left: 10px;
 }
