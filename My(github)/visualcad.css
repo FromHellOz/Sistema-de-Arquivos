@@ -44,6 +44,7 @@ body{
 h1{
     text-align:center;
     margin-bottom: 20px;
+    margin-top: 40%;
     color: var(--prata);
 }
 .label-float input{
@@ -114,16 +115,16 @@ h1{
     margin-right:5px;
 
 }
-#closed{
+/*#closed{
     position:absolute;
-    background-color: #ffffff;
+    background-color: #ff0000;
     cursor:pointer;
     display:flex;
     margin-top:-26px;
     margin-bottom:40px;
     margin-left: 153px;
     margin-right: 5px;
-}
+}*/
 .pace .pace-progress{
     background-color:var(--azul);
     position:fixed;
@@ -172,11 +173,11 @@ a:hover{
     transition: all .4s ease-out;
 }
 hr{
-    margin-top: 8%;
-    margin-bottom: 6%;
+    margin-top: 20%;
+    margin-bottom: 1%;
     width: 100%;
 }
 .redirecionar{
-    margin-top: 50px;
+    margin-top: 10px;
     margin-left: 10px;
 }
