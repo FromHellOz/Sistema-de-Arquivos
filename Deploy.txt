@@ -1,0 +1,18 @@
+Diretório:   "C:\Program Files\NetMake\v9-php81"
+Porta        : 8092
+HostName     : e202621
+PHP Version  : 81
+
+Banco de Dados
+
+Host   : PMLSRV89 ou 10.0.0.89
+Usuário: sa
+Senha  : l3it3@1000
+Banco  : prontuario
+
+
+Nome da Conexão:
+conn_mssql
+
+Publicação Oficial:
+https://serv71.limeira.sp.gov.br/Arquivar/
