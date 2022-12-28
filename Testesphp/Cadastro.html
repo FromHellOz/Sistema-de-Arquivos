@@ -17,30 +17,30 @@
       </a>
     <div class="container">
         <div class="card">
-            <form action="Testecad.php" method="post">
+            <form action="connect.php" method="POST">
             <h1>Cadastre-se</h1>
             
             <div class="label-float">
 
-                <input type="text" placeholder="" id="user" required>
+                <input type="text" placeholder="" id="user" name="user" required>
                 <label for="user">Nome Completo:</label>
 
             </div>
             <div class="label-float">
 
-                <input type="text" placeholder="" id="email" required>
+                <input type="text" placeholder="" id="email" name="email" required>
                 <label for="">Email:</label>
 
             </div>
             <div class="label-float">
 
-                <input type="number" placeholder="" id="cpf" required>
+                <input type="number" placeholder="" id="cpf" name="cpf" required>
                 <label for="">CPF:</label>
 
             </div>
             <div class="label-float">
                 <div id="input">
-                    <input type="password" placeholder="" id="senha" value="" required maxlength="16">
+                    <input type="password" placeholder="" id="senha" name="senha" value="" required maxlength="16">
                     <label for="senha">Senha</label>
                     <img src="imagens/Open.png" id="Open"  width="20X20px"><br>
             </div>
@@ -52,7 +52,7 @@
 
             <div class="label-float">
 
-                <input type="number" placeholder="" id="matricula" required>
+                <input type="number" placeholder="" id="matricula" name="matricula" required>
                 <label for="matricula">Matrícula:</label>
 
             </div>

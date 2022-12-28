@@ -1,31 +1,4 @@
-<?php
-
- $host = '10.0.0.89';
- $porta = '8092';
- $user = 'sa';
- $senha = 'l3it3@1000';
- $database = 'prontuario';
-
- $server = $porta !== '8092' && is_string($porta) ? $host .= ", $porta":$host;
-
-$conninfo = array("Database"=>$database, "UID"=>$user, "PWD"=>$senha);
-$link = sqlsrv_connect($server,$conninfo); 
-
-/*if($link){
-    echo "Sucesso: Conexão com Banco de Dados estabelecida" . PHP_EOL;
-
-}else{
-    echo "Erro: Falha ao se conectar com o banco de dados" . PHP_EOL;
-
-}
-
-    $host = '10.0.0.89';
-    $user = 'sa';
-    $senha = 'l3it3@1000';
-    $link = mssql_connect($host, $user, $senha) 
-*/
-
-?>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -35,10 +8,37 @@ $link = sqlsrv_connect($server,$conninfo);
     <script type="text/javascript" src="js/eyelogincad.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
-    <title>Página de Cadastro</title>    
-    </head>
-    <body>
-        
+    <title>Página de Cadastro</title>
+</head>
+<body>
+    <?php
+
+    $host = '10.0.0.89';
+    $porta = '8092';
+    $user = 'sa';
+    $senha = 'l3it3@1000';
+    $database = 'prontuario';
+
+    $server = $porta !== '8092' && is_string($porta) ? $host .= ", $porta":$host;
+
+    $conninfo = array("Database"=>$database, "UID"=>$user, "PWD"=>$senha);
+    $link = sqlsrv_connect($server,$conninfo); 
+
+    /*if($link){
+    echo "Sucesso: Conexão com Banco de Dados estabelecida" . PHP_EOL;
+
+    }else{
+    echo "Erro: Falha ao se conectar com o banco de dados" . PHP_EOL;
+
+    }
+
+    $host = '10.0.0.89';
+    $user = 'sa';
+    $senha = 'l3it3@1000';
+    $link = mssql_connect($host, $user, $senha) 
+    */
+
+    ?>
     <a class="site-title">
         <img src="imagens/brasao.png">
       </a>
@@ -91,7 +91,7 @@ $link = sqlsrv_connect($server,$conninfo);
                 <span class="cad">
                     Já tem uma Conta?
                 </span>
-                <a  class="link" href="index.php">
+                <a  class="link" href="index.html">
                     Entre aqui!
                 </a>
                 </li>
@@ -107,3 +107,5 @@ $link = sqlsrv_connect($server,$conninfo);
                 });
             </script>
     </form>
+</body>
+</html>

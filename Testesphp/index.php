@@ -1,4 +1,5 @@
 
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +10,30 @@
     <script type="text/javascript" src="js/login.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
     <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
-    <body>
+    <title>Entrar</title>
+</head>
+<body>
+    <?php
+
+    $host = '10.0.0.89';
+    $porta = '8092';
+    $user = 'sa';
+    $senha = 'l3it3@1000';
+    $database = 'prontuario';
+
+    $server = $porta !== '8092' && is_string($porta) ? $host .= ", $porta":$host;
+
+    $conninfo = array("Database"=>$database, "UID"=>$user, "PWD"=>$senha);
+    $linkado = sqlsrv_connect($server,$conninfo); 
+
+    /*if($linkado){
+        echo "Sucesso: Conexão com Banco de Dados estabelecida" . PHP_EOL;
+
+    }else{
+        echo "Erro: Falha ao se conectar com o banco de dados" . PHP_EOL;
+
+    }*/
+    ?>
     <a class="site-title">
         <img src="imagens/brasao.png">
       </a>
@@ -57,24 +81,11 @@
                     </form>
                 </div>
             </form>
-<?php
-
-$host = '10.0.0.89';
- $porta = '8092';
- $user = 'sa';
- $senha = 'l3it3@1000';
- $database = 'prontuario';
-
- $server = $porta !== '8092' && is_string($porta) ? $host .= ", $porta":$host;
-
-$conninfo = array("Database"=>$database, "UID"=>$user, "PWD"=>$senha);
-$linkado = sqlsrv_connect($server,$conninfo); 
-
-/*if($linkado){
-    echo "Sucesso: Conexão com Banco de Dados estabelecida" . PHP_EOL;
-
-}else{
-    echo "Erro: Falha ao se conectar com o banco de dados" . PHP_EOL;
-
-}*/
-?>
+        </div>
+    </section> 
+    <footer class="site-footer">
+        <div >
+   
+    </footer>   
+</body>
+</html>
