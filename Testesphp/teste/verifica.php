@@ -12,6 +12,16 @@
 </head>
 <body>
  
+    <?php
+
+    $login = $_POST['user'];
+    $cpf = $_POST['cpf'];
+    $matricula = $_POST['matricula'];
+    $email = $_POST['email'];
+    $senha = MD5($_POST['senha']);
+
+    ?>
+
     <a class="site-title">
         <img src="imagens/brasao.png">
       </a>

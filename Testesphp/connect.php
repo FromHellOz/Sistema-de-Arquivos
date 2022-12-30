@@ -1,24 +1,19 @@
 <?php
 include 'cadastro.html';
 
-$_POST['user'];
-$_POST['cpf'];
-$_POST['matricula'];
-$_POST['email'];
-MD5($_POST['senha']);
+$login = $_POST['user'];
+$cpf = $_POST['cpf'];
+$matricula = $_POST['matricula'];
+$email = $_POST['email'];
+$senha = MD5($_POST['senha']);
 
-$porta = '3306';
-$host = 'localhost';
 $database = 'prontuario';
-$server = $porta !== '3306' && is_string($porta) ? $host .= ", $porta":$host;
 
-$conninfo = mysql_connect('localhost','root','onsw42db', 'prontuario');
+$conninfo = mysqli_connect('localhost','root','');
 
-
-$db = mysql_select_db($database);
-$query_select = "SELECT login FROM dadosuser WHERE login = $login";
-$select = mysql_query($query_select,$db);
-$array = mysql_fetch_array($select);
+$db = mysqli_select_db($conninfo,$database);
+$result = mysqli_query($conninfo,"SELECT * FROM dadosuser");
+$array = mysqli_fetch_array($conninfo,$result);
 $logarray = $array['login'];
 
 if($login == '' || $login = null){
@@ -37,10 +32,10 @@ if($login == '' || $login = null){
 }else{
 
     $query = "INSERT INTO userdados (login,senha,cpf,matricula,email) 
-    VALUES ($login, $senha, $cpf, $matricula, $email)";
-    $insert = sqlsrv_query($query, $connec);
+    VALUES ('{$login}', {'$senha'}, {'$cpf'}, {'$matricula'}, {'$email'})";
+    $insert = mysqli_query($query, $connect); 
 
-    if($insert){
+    if($insert){ 
 
         echo"<script language='javascript' type='text/javascript'>
         alert('Usuário Cadastrado com sucesso!');window.location.href=
