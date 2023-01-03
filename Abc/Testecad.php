@@ -1,3 +1,44 @@
+
+<?php
+/*ini_set('display_error',1);
+ini_set('display_startup_errors',1); error_reporting(E_ALL);
+//exeplo pra não rodar o código sem necessida
+if((isset($_POST['user']))&&(!empty($_POST['user']))){
+//verificar a conexão
+$conexao = mssql_connect('10.0.0.89','sa','l3it3@1000');
+mssql_select_db("prontuario",$conexao)
+or die('Erro na conexão');
+
+$user = $_POST['user'];
+$cpf = $_POST['cpf'];
+$senha = $_POST['senha'];
+$matricula = $_POST['matricula'];
+
+$string_sql = "INSERT INTO usuarios(user,cpf,senha,matricula) VALUES ('{$user}','{$cpf}','{$senha}','{$matricula}')";
+$insert_member_res = mssql_query($string_sql,$conexao);//realiza a consulta
+
+if(mssql_rows_affected($conexao)>0){//verifica se alguma linha fpi afetada, nesse caso se alguma linha foi inserida
+    echo "<p>Usuário registrado";
+    echo '<a href=""index.html>Fazer Login?</a>';
+}else {
+    echo "Não foi possível inserir banco de dados";
+}
+mssql_close($conexao);//fechar conexão
+}
+*/
+
+$link = mssql_connect(['PMLSRV89',['sa',['l3it3@1000']]]);
+
+if(!$link){
+    echo "Erro: Falha ao se conectar com o banco de dados" . PHP_EOL;
+    echo "Debbugin Errno: " . mssql_connect_errno();
+    echo "Debbugin Error: " . mssql_connect_error();
+}
+echo "Sucesso: Sucesso ao se conectar ao banco de dados" . PHP_EOL;
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,30 +58,30 @@
       </a>
     <div class="container">
         <div class="card">
-            <form method="GET" action="connect.php" id="formulario" name="formulario" >
+            <form action="Testecad.php" method="post">
             <h1>Cadastre-se</h1>
             
             <div class="label-float">
 
-                <input type="text" placeholder="" id="user" name="user" required>
+                <input type="text" placeholder="" id="user" required>
                 <label for="user">Nome Completo:</label>
 
             </div>
             <div class="label-float">
 
-                <input type="text" placeholder="" id="email" name="email" required>
+                <input type="text" placeholder="" id="email" required>
                 <label for="">Email:</label>
 
             </div>
             <div class="label-float">
 
-                <input type="number" placeholder="" id="cpf" name="cpf" required>
+                <input type="number" placeholder="" id="cpf" required>
                 <label for="">CPF:</label>
 
             </div>
             <div class="label-float">
                 <div id="input">
-                    <input type="password" placeholder="" id="senha" name="senha" value="" required maxlength="16">
+                    <input type="password" placeholder="" id="senha" value="" required maxlength="16">
                     <label for="senha">Senha</label>
                     <img src="imagens/Open.png" id="Open"  width="20X20px"><br>
             </div>
@@ -52,7 +93,7 @@
 
             <div class="label-float">
 
-                <input type="number" placeholder="" id="matricula" name="matricula" required>
+                <input type="number" placeholder="" id="matricula" required>
                 <label for="matricula">Matrícula:</label>
 
             </div>

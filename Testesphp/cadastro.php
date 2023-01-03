@@ -17,7 +17,7 @@
       </a>
     <div class="container">
         <div class="card">
-            <form method="GET" action="connect.php" id="formulario" name="formulario" >
+            <form method="POST" action="connect.php" id="formulario" name="formulario" >
             <h1>Cadastre-se</h1>
             
             <div class="label-float">
@@ -81,4 +81,23 @@
             </script>
     </form>
 </body>
+
+<?php
+
+if(isset($POST["user"]) ){
+
+    $id = 0;
+
+    $login = $POST['user'];
+    $cpf = $POST['cpf'];
+    $matricula = $POST['matricula'];
+    $email = $POST['email'];
+    $senha = MD5($POST['senha']);
+
+    $novouser = new cadastro($login,$cpf,$matricula,$email,$senha);
+    $novouser->cadastroUser();
+}
+
+?>
+
 </html>
