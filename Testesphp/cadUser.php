@@ -1,4 +1,5 @@
 <?php
+            include'cadastro.php';
 
 class novouser{
 
@@ -68,6 +69,7 @@ class novouser{
         echo"<script language='javascript' type='text/javascript'>
           alert('Usuário cadastrado com sucesso!');window.location.
           href='cadastro.html'</script>";
+          mysqli_close($link);
     }
     }
 }
@@ -75,8 +77,18 @@ class novouser{
     function buscarUser($cadBusca){
         try {
             $pdo = new PDO('mysql:host=localhost;dbname=prontuario', 'root', '');
+            $pdo->setAttribute(PDO::ATTR_ERRORMODE, PDO::ERRORMODE_EXCEPTION);
+
+            $consulta = $pdo->query("SELECT id,nome,senha,cpf,email,matricula FROM prontuario");
+            if ($cadBusca !=""){
+                $consulta = $pdo->query("SELECT id,nome,senha,cpf,email,matricula FROM prontuario WHERE $cadBusca '%".$cadBusca."%'or cns like '%".$cadBusca."%'"); 
+            }
+            echo"<div class='panel panel-info'></div>";
+            echo"<div class='panel-heading'>Visitante</div>";
+        } catch(PDOException $e) {
+            echo'Error ao buscar';
+            echo $e;
         }
-        catch
     }
 
 ?>
