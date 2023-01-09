@@ -11,7 +11,10 @@
     <title>Página de Cadastro</title>
 </head>
 <body>
- 
+<?php
+    $sql = "INSERT INTO userdados (nome,senha,cpf,email,matricula)
+    VALUES ('#user','#senha','#cpf','#email','#matricula')"
+?>
     <a class="site-title">
         <img src="imagens/brasao.png">
       </a>
@@ -81,23 +84,4 @@
             </script>
     </form>
 </body>
-
-<?php
-
-if(isset($POST["user"]) ){
-
-    $id = 0;
-
-    $login = $POST['user'];
-    $cpf = $POST['cpf'];
-    $matricula = $POST['matricula'];
-    $email = $POST['email'];
-    $senha = MD5($POST['senha']);
-
-    $novouser = new cadastro($login,$cpf,$matricula,$email,$senha);
-    $novouser->cadastroUser();
-}
-
-?>
-
 </html>
